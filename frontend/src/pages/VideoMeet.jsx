@@ -9,8 +9,9 @@ import { CallEnd, Chat, Flag, Mic, MicOff, ScreenShare, StopScreenShare, Videoca
 import { Badge, IconButton } from "@mui/material";
 import withAuth from '../utils/withAuth'
 import SnackBar from "./SnackBar";
+import server from "../enviroment.js";
 
-const server_url = "http://localhost:8000";
+const server_url = server;
 
 var connections = {};
 
