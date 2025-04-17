@@ -63,10 +63,7 @@ function VideoMeetComponent() {
     let [snackBarMessage, setSnackBarMessage] = useState('');
 
 
-    //Todo
-    // if(isChrome() === false){
-
-    // }
+    
 
     const getPermission = async () => {
         try {
@@ -465,16 +462,7 @@ function VideoMeetComponent() {
 
 
 
-    let copyLink = () => {
-        const link = window.location.href;
-        navigator.clipboard.writeText(link);
-        setSnackBarMessage("Link Copy")
-        setShowSnackBar(true);
-        setTimeout(() => {
-            setShowSnackBar(false)
-        }, 3000);
-        
-    }
+    
 
     let copyCode = () => {
         const link = window.location.pathname.split('/')[1];
@@ -508,7 +496,7 @@ function VideoMeetComponent() {
                         <Button variant="contained" onClick={connect}>Connect</Button>
                     </div>
                     <div>
-                        <Button variant="contained" style={{ margin: "10px" }} onClick={copyLink}>Copy Invite link</Button>
+                        
                         <Button variant="contained" style={{ margin: "10px" }} onClick={copyCode}>Copy invite Code</Button>
                     </div>
                     <SnackBar message={snackBarMessage} show={showSnackBar} />
